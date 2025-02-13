@@ -1,0 +1,60 @@
+@model SubmissionForm
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <title>title</title>
+</head>
+<body>
+<div>
+    <form method="post">
+        <label asp-for="Category">Category: </label>
+        <input required asp-for="Category">
+        <br/>
+        <br/>
+        <label asp-for="Title">Title: </label>
+        <input required asp-for="Title">
+        <br/>
+        <br/>
+        <label asp-for="Year">Year: </label>
+        <input required asp-for="Year">
+        <br/>
+        <br/>
+        <label asp-for="Director">Director: </label>
+        <input required asp-for="Director">
+        <br/>
+        <br/>
+        <label asp-for="Rating">Rating: </label>
+        <select required asp-for="Rating">
+            <option>NR/UR</option>
+            <option>R</option>
+            <option>PG-13</option>
+            <option>PG</option>
+            <option>G</option>
+            <option>TV-MA</option>
+            <option>TV-14</option>
+            <option>TV-Y7</option>
+            <option>TV-PG</option>
+        </select>
+        <br/>
+        <br/>
+    <label asp-for="Edited">Edited: </label>
+        <select asp-for="Edited">
+            <option value="true">Yes</option>
+            <option value="false">No</option>
+        </select>
+        <br/>
+        <br/>
+        <label asp-for="LentTo">Lent to: </label>
+        <input asp-for="LentTo">
+        <br/>
+        <br/>
+        <label asp-for="Notes">Notes: </label>
+        <input maxlength="25" asp-for="Notes">
+        <br/><br/>
+        <button type="submit">Submit</button>
+    </form>
+</div>
+</body>
+</html>
