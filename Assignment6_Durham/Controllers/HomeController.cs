@@ -38,5 +38,14 @@ namespace Assignment6_Durham.Controllers
             _context.SaveChanges();
             return View("Confirmation");
         }
+
+        public IActionResult MovieList()
+        {
+            //Linq
+            var forms = _context.Forms
+                .Where(x => x.Rating == "PG-13").ToList();
+
+            return View();
+        }
     }
 }

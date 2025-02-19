@@ -125,3 +125,4 @@
 /Users/sarah/RiderProjects/Assignment6_Durham/Assignment6_Durham/bin/Debug/net8.0/runtimes/win-x86/native/e_sqlite3.dll
 /Users/sarah/RiderProjects/Assignment6_Durham/Assignment6_Durham/obj/Debug/net8.0/Assignment6_Durham.csproj.AssemblyReference.cache
 /Users/sarah/RiderProjects/Assignment6_Durham/Assignment6_Durham/obj/Debug/net8.0/Assignment6_Durham.csproj.CopyComplete
+/Users/sarah/RiderProjects/Assignment6_Durham/Assignment6_Durham/obj/Debug/net8.0/Assignment6_Durham.sourcelink.json
