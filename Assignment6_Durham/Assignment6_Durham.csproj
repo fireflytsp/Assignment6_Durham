@@ -21,4 +21,9 @@
       </PackageReference>
     </ItemGroup>
 
+    <ItemGroup>
+      <Compile Remove="Migrations\20250220210357_UpdateYearValidation.Designer.cs" />
+      <Compile Remove="Migrations\20250220210357_UpdateYearValidation.cs" />
+    </ItemGroup>
+
 </Project>
