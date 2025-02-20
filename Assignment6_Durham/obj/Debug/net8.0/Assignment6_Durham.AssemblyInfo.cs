@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Assignment6_Durham")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+1183cfa48289e2a52e2f6d16817f8463c511d494")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+de99d238986721aeb490a37fbf9192c664a72d69")]
 [assembly: System.Reflection.AssemblyProductAttribute("Assignment6_Durham")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Assignment6_Durham")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

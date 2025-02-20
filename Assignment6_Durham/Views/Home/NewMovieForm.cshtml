@@ -6,25 +6,39 @@
 <head>
     <title>title</title>
 </head>
+<h1>New Movie Form</h1>
 <body>
 <div>
     <form method="post">
+        <input type="hidden" asp-for="MovieId" />
+        
         <label asp-for="Category">Category: </label>
-        <input required asp-for="Category">
+        <select asp-for="CategoryId" class="form-control">
+            <option value="">Select a Category</option>
+            @foreach (var c in ViewBag.Categories)
+            {
+                <option value="@c.CategoryId">@c.CategoryName</option>
+                <!-- :white_check_mark: CORRECT -->
+            }
+        </select>
         <br/>
         <br/>
+        
         <label asp-for="Title">Title: </label>
         <input required asp-for="Title">
         <br/>
         <br/>
+        
         <label asp-for="Year">Year: </label>
-        <input required asp-for="Year">
+        <input required asp-for="Year" type="number" id="year" name="Year" min="1888" required>
         <br/>
         <br/>
+        
         <label asp-for="Director">Director: </label>
         <input required asp-for="Director">
         <br/>
         <br/>
+        
         <label asp-for="Rating">Rating: </label>
         <select required asp-for="Rating">
             <option>NR/UR</option>
@@ -39,21 +53,31 @@
         </select>
         <br/>
         <br/>
-    <label asp-for="Edited">Edited: </label>
+        
+        <label asp-for="Edited">Edited: </label>
         <select asp-for="Edited">
             <option value="true">Yes</option>
             <option value="false">No</option>
         </select>
         <br/>
         <br/>
+        
         <label asp-for="LentTo">Lent to: </label>
         <input asp-for="LentTo">
         <br/>
         <br/>
+        
+        <label asp-for="CopiedToPlex">Copied To Plex? [Y/N]: </label>
+        <input asp-for="CopiedToPlex">
+        <br/>
+        <br/>
+        
         <label asp-for="Notes">Notes: </label>
         <input maxlength="25" asp-for="Notes">
         <br/><br/>
         <button type="submit">Submit</button>
+        
+        <div asp-validation-summary="All"></div>
     </form>
 </div>
 </body>

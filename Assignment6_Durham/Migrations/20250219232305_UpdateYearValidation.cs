@@ -5,7 +5,7 @@
 namespace Assignment6_Durham.Migrations
 {
     /// <inheritdoc />
-    public partial class AllowNullEdited : Migration
+    public partial class UpdateYearValidation : Migration
     {
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)
