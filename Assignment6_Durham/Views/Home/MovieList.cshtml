@@ -1,32 +1,81 @@
+@model List<SubmissionForm>
+
 @{
-    Layout = null;
+    Layout = "_Layout";  // Use the shared layout
 }
 
 <!DOCTYPE html>
-
 <html>
 <head>
-    <title>title</title>
+    <title>Movie List</title>
+    <style>
+        table {
+            width: 100%;
+            border-collapse: collapse; /* Ensures table borders are merged */
+        }
+
+        th, td {
+            border: 1px solid #ddd; /* Adds a border around table cells */
+            padding: 8px;
+            text-align: left;
+        }
+
+        th {
+            background-color: #f2f2f2; /* Light gray background for headers */
+            font-weight: bold;
+        }
+
+        tr:nth-child(even) {
+            background-color: #f9f9f9; /* Alternating row colors */
+        }
+
+        tr:hover {
+            background-color: #ddd; /* Highlight row on hover */
+        }
+
+        h2 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+    </style>
 </head>
 <body>
+
 <table>
-    <thead>
-    <td>Category</td>
-    <td>Title</td>
-    <td>Year</td>
-    <td>Director</td>
-    <td>Rating</td>
-    <td>Edited</td>
-    <td>Lent to</td>
-    <td>Notes</td>
+    <thead class="fw-bold">
+    <tr>
+        <th>Category ID</th>
+        <th>Title</th>
+        <th>Year</th>
+        <th>Director</th>
+        <th>Rating</th>
+        <th>Edited</th>
+        <th>Lent to</th>
+        <th>Copied to Plex</th>
+        <th>Notes</th>
+    </tr>
     </thead>
-    
     <tbody>
     
+    @foreach (var f in Model)
+    {
+        <tr>
+            <td>@f.CategoryId</td>
+            <td>@f.Title</td>
+            <td>@f.Year</td>
+            <td>@f.Director</td>
+            <td>@f.Rating</td>
+            <td>@f.Edited</td>
+            <td>@f.LentTo</td>
+            <td>@f.CopiedToPlex</td>
+            <td>@f.Notes</td>
+
+            <td><a class="btn btn-info" asp-controller-="Home" asp-action="Edit" asp-route-id="@f.MovieId">Edit</a></td>
+            <td><a class="btn btn-danger" asp-controller="Home" asp-action="Delete" asp-route-id="@f.MovieId">Delete</a></td>
+        </tr>
+    }
     </tbody>
 </table>
-<div>
 
-</div>
 </body>
 </html>
